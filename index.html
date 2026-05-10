@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Survivor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+
+        <div id="joystick-zone">
+            <div id="joystick-base" class="hidden">
+                <div id="joystick-knob"></div>
+            </div>
+        </div>
+
+        <div id="ui-layer">
+            <div id="top-bar">
+                <div class="top-info">
+                    <div id="level-display">Lv: <span id="level-text">1</span></div>
+                    <div id="time-display">Time: <span id="time-text">00:00</span></div>
+                    <div style="display: flex; gap: 10px; align-items: center;">
+                        <img id="skill-book-icon" src="image/icon/book.png" alt="スキル確認" title="取得スキル一覧">
+                        <button id="pause-btn">|| 一時停止</button>
+                    </div>
+                </div>
+                <div id="exp-bar-container">
+                    <div id="exp-bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="skill-selection-screen" class="hidden">
+            <h2 class="level-up-text">レベルアップ！</h2>
+            <p class="select-text">スキルを選択してください</p>
+            <div id="skill-cards-container"></div>
+        </div>
+
+        <div id="branch-selection-screen" class="hidden">
+            <h2 class="level-up-text" style="color: #ffaa00;">進化ルート選択</h2>
+            <p class="select-text">どちらの能力を開花させますか？</p>
+            <div id="branch-cards-container"></div>
+        </div>
+
+        <div id="pause-screen" class="hidden">
+            <h2 class="level-up-text">一時停止中</h2>
+            <button id="resume-btn">再開</button>
+            <button id="quit-btn" style="background-color: #ff4444;">終了（リタイア）</button>
+            <button id="save-quit-btn">保存してタイトルへ</button>
+        </div>
+
+        <div id="active-skills-screen" class="hidden">
+            <h2 class="level-up-text">取得済みスキル</h2>
+            <div id="active-skills-container"></div>
+            <button id="close-skills-btn" class="menu-btn">閉じる</button>
+        </div>
+
+        <div id="start-screen">
+            <h1>Survivor Base</h1>
+            <p>画面をタップしてスタート</p>
+            <p style="font-size: 12px; color: #aaa;">※続きからプレイする場合もタップしてください</p>
+        </div>
+
+        <div id="game-over-screen" class="hidden">
+            <h2 class="level-up-text" style="color: #ff4444;">GAME OVER</h2>
+            <p id="survival-time-text" class="select-text">生存時間: 00:00</p>
+            <button id="restart-btn" class="menu-btn">タイトルへ戻る</button>
+        </div>
+    </div>
+
+    <script src="save.js"></script>
+    <script src="sub.js"></script>
+    <script src="enemy/process.js"></script>
+    <script src="ui.js"></script>
+
+    <script src="ability/ヴァンパイアたる者/txt.js"></script>
+    <script src="ability/懲戒/txt.js"></script>
+    <script src="ability/緋色の結界/txt.js"></script>
+    <script src="ability/神の怒り/txt.js"></script>
+    <script src="ability/神怒天罰/txt.js"></script>
+    <script src="ability/光影の識別/txt.js"></script>
+    <script src="ability/寒霜ストーム/txt.js"></script>
+    <script src="ability/氷の塊/txt.js"></script>
+    <script src="ability/絶・氷点/txt.js"></script>
+    <script src="ability/玄亀の踵/txt.js"></script>
+    <script src="ability/玄武降臨/txt.js"></script>
+    <script src="ability/氷の玄武/txt.js"></script>
+
+    <script src="ability/ヴァンパイアたる者/process.js"></script>
+    <script src="ability/懲戒/process.js"></script>
+    <script src="ability/緋色の結界/process.js"></script>
+    <script src="ability/神の怒り/process.js"></script>
+    <script src="ability/神怒天罰/process.js"></script>
+    <script src="ability/光影の識別/process.js"></script>
+    <script src="ability/寒霜ストーム/process.js"></script>
+    <script src="ability/氷の塊/process.js"></script>
+    <script src="ability/絶・氷点/process.js"></script>
+    <script src="ability/玄亀の踵/process.js"></script>
+    <script src="ability/玄武降臨/process.js"></script>
+    <script src="ability/氷の玄武/process.js"></script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
